@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: google-generativeai
+Version: 0.1.0rc1
+Summary: Google Generative AI High level API client library and tools.
+Home-page: https://github.com/google/generative-ai-python
+Author: Google LLC
+Author-email: googleapis-packages@google.com
+License: Apache 2.0
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: google-ai-generativelanguage (==0.1.0)
+Provides-Extra: dev
+Requires-Dist: absl-py ; extra == 'dev'
+Requires-Dist: asynctest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: nose2 ; extra == 'dev'
+Requires-Dist: pytype ; extra == 'dev'
+Requires-Dist: pyyaml ; extra == 'dev'
+
+This is a repo for the generative language client library.

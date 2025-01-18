@@ -1,0 +1,1 @@
+import hunter; hunter._embed_via_environment()

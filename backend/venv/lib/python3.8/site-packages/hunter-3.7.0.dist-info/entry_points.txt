@@ -1,0 +1,2 @@
+[console_scripts]
+hunter-trace = hunter.remote:main
