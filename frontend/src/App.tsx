@@ -5,7 +5,10 @@ function App() {
 
   return (
     <>
+    <div className="bg-gray-900">
     <LeadDashboard />
+    </div>
+  
     </>
   )
 }

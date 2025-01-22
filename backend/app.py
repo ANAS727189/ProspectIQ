@@ -11,15 +11,14 @@ from typing import List, Dict
 import os
 import json
 from serpapi.google_search import GoogleSearch
+from dotenv import load_dotenv
 
+load_dotenv()
 
-GEMINI_API_KEY = 'AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho'
-CRUNCHBASE_API_KEY = "44190fdf321dd6f49d1122fc1965cf43"
-CRUNCHBASE_API_URL = "https://api.crunchbase.com/api/v4/searches/organizations"
-SERPAPI_API_KEY = "53183c3846957b23ba5ccd3dc894a01bba0a155fad19f908d98f28e9a43c71e4" 
-
-
-
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+CRUNCHBASE_API_KEY = os.getenv('CRUNCHBASE_API_KEY')
+CRUNCHBASE_API_URL = os.getenv('CRUNCHBASE_API_URL')
+SERPAPI_API_KEY = os.getenv('SERPAPI_API_KEY')
 
 
 @dataclass
@@ -70,7 +69,7 @@ class LeadGenerationSystem:
                         "sort": "desc"
                     }
                 ],
-                "limit": 10
+                "limit": 5
             }
 
             logging.info(f"Sending request to Crunchbase API with payload: {json.dumps(payload, indent=2)}")

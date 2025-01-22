@@ -9288,3 +9288,2972 @@
 2025-01-17 18:03:55,466 - INFO - [app.py:305] - Scheduler started
 2025-01-17 18:03:55,530 - WARNING - [_internal.py:97] -  * Debugger is active!
 2025-01-17 18:03:55,532 - INFO - [_internal.py:97] -  * Debugger PIN: 697-049-393
+2025-01-22 19:24:35,697 - INFO - [app.py:49] - Configured to use direct API calls for Gemini model
+2025-01-22 19:24:35,730 - INFO - [app.py:298] - Performing initial lead update
+2025-01-22 19:24:35,730 - INFO - [app.py:204] - Starting lead update process
+2025-01-22 19:24:35,731 - INFO - [app.py:76] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 19:24:37,485 - INFO - [app.py:85] - Crunchbase API Response Status: 200
+2025-01-22 19:24:37,486 - INFO - [app.py:90] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 19:24:37,487 - INFO - [app.py:228] - Created 10 new lead objects
+2025-01-22 19:24:38,396 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:24:38,396 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:24:42,927 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:24:42,927 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:24:47,829 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:24:47,829 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:24:52,604 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:24:52,605 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:24:59,138 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:24:59,138 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:03,749 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:03,751 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:11,535 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:11,537 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:20,507 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:20,508 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:24,755 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:24,755 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:30,397 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:30,398 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:36,049 - INFO - [app.py:240] - Successfully added 10 new leads
+2025-01-22 19:25:36,050 - INFO - [app.py:305] - Scheduler started
+2025-01-22 19:25:36,109 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-22 19:25:36,109 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-01-22 19:25:36,110 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-22 19:25:36,495 - INFO - [app.py:49] - Configured to use direct API calls for Gemini model
+2025-01-22 19:25:36,497 - INFO - [app.py:298] - Performing initial lead update
+2025-01-22 19:25:36,497 - INFO - [app.py:204] - Starting lead update process
+2025-01-22 19:25:36,497 - INFO - [app.py:76] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 19:25:38,148 - INFO - [app.py:85] - Crunchbase API Response Status: 200
+2025-01-22 19:25:38,148 - INFO - [app.py:90] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 19:25:38,150 - INFO - [app.py:228] - Created 10 new lead objects
+2025-01-22 19:25:38,621 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:38,622 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:41,505 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:41,505 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:44,407 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:44,409 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:47,065 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:47,065 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:51,996 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:51,997 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:54,607 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:54,607 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:25:57,205 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:25:57,206 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:26:01,087 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:26:01,088 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:26:04,970 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "consumer": "projects/589741925103",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:26:04,971 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:26:07,585 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:26:07,585 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:26:09,729 - INFO - [app.py:240] - Successfully added 10 new leads
+2025-01-22 19:26:09,730 - INFO - [app.py:305] - Scheduler started
+2025-01-22 19:26:09,753 - WARNING - [_internal.py:97] -  * Debugger is active!
+2025-01-22 19:26:09,892 - INFO - [_internal.py:97] -  * Debugger PIN: 132-408-707
+2025-01-22 19:28:23,720 - INFO - [_internal.py:97] -  * Detected change in '/mnt/MasterDrive/WebScraping/backend/app.py', reloading
+2025-01-22 19:28:23,813 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-22 19:28:24,254 - INFO - [app.py:44] - Configured to use direct API calls for Gemini model
+2025-01-22 19:28:24,258 - INFO - [app.py:291] - Performing initial lead update
+2025-01-22 19:28:24,259 - INFO - [app.py:201] - Starting lead update process
+2025-01-22 19:28:24,259 - INFO - [app.py:68] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 19:28:26,056 - INFO - [app.py:75] - Crunchbase API Response Status: 200
+2025-01-22 19:28:26,056 - INFO - [app.py:80] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 19:28:26,058 - INFO - [app.py:223] - Created 10 new lead objects
+2025-01-22 19:28:31,764 - INFO - [app.py:44] - Configured to use direct API calls for Gemini model
+2025-01-22 19:28:31,767 - INFO - [app.py:291] - Performing initial lead update
+2025-01-22 19:28:31,767 - INFO - [app.py:201] - Starting lead update process
+2025-01-22 19:28:31,767 - INFO - [app.py:68] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 19:28:33,069 - INFO - [app.py:75] - Crunchbase API Response Status: 200
+2025-01-22 19:28:33,070 - INFO - [app.py:80] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 19:28:33,071 - INFO - [app.py:223] - Created 10 new lead objects
+2025-01-22 19:28:33,537 - WARNING - [app.py:116] - Rate limit exceeded. Retrying after 60 seconds.
+2025-01-22 19:29:34,354 - WARNING - [app.py:116] - Rate limit exceeded. Retrying after 60 seconds.
+2025-01-22 19:31:13,432 - INFO - [app.py:49] - Configured to use direct API calls for Gemini model
+2025-01-22 19:31:13,435 - INFO - [app.py:298] - Performing initial lead update
+2025-01-22 19:31:13,435 - INFO - [app.py:204] - Starting lead update process
+2025-01-22 19:31:13,435 - INFO - [app.py:76] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 19:31:15,356 - INFO - [app.py:85] - Crunchbase API Response Status: 200
+2025-01-22 19:31:15,357 - INFO - [app.py:90] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 19:31:15,358 - INFO - [app.py:228] - Created 10 new lead objects
+2025-01-22 19:31:17,234 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:31:17,235 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:31:23,635 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "service": "generativelanguage.googleapis.com",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:31:23,635 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyBgW5x1_bYwUWKyoiTyKojSFWoq0D522ho
+2025-01-22 19:32:58,219 - INFO - [app.py:49] - Configured to use direct API calls for Gemini model
+2025-01-22 19:32:58,221 - INFO - [app.py:298] - Performing initial lead update
+2025-01-22 19:32:58,221 - INFO - [app.py:204] - Starting lead update process
+2025-01-22 19:32:58,221 - INFO - [app.py:76] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 19:33:00,127 - INFO - [app.py:85] - Crunchbase API Response Status: 200
+2025-01-22 19:33:00,127 - INFO - [app.py:90] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 19:33:00,128 - INFO - [app.py:228] - Created 10 new lead objects
+2025-01-22 19:33:00,857 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:33:00,858 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 19:33:03,763 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:33:03,764 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 19:33:07,642 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "consumer": "projects/589741925103",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:33:07,642 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 19:33:11,526 - INFO - [app.py:123] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 19:33:11,527 - ERROR - [app.py:127] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 21:32:42,089 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-22 21:32:42,118 - INFO - [app.py:295] - Performing initial lead update
+2025-01-22 21:32:42,119 - INFO - [app.py:201] - Starting lead update process
+2025-01-22 21:32:42,119 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 21:32:47,442 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-22 21:32:47,443 - INFO - [app.py:87] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 21:32:47,444 - INFO - [app.py:225] - Created 10 new lead objects
+2025-01-22 21:32:53,220 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:32:53,221 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 21:33:01,271 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:33:01,271 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 21:33:07,066 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:33:07,066 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyAMwTiL-Uw9nhDii5OjiAkVkmA7zJTtCQY
+2025-01-22 21:34:41,172 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-22 21:34:41,175 - INFO - [app.py:295] - Performing initial lead update
+2025-01-22 21:34:41,175 - INFO - [app.py:201] - Starting lead update process
+2025-01-22 21:34:41,175 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 21:34:42,945 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-22 21:34:42,945 - INFO - [app.py:87] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 21:34:42,946 - INFO - [app.py:225] - Created 10 new lead objects
+2025-01-22 21:34:44,673 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit_value": "0",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:34:44,673 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:34:52,970 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:34:52,971 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:34:56,834 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:34:56,835 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:00,669 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:00,671 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:04,532 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "consumer": "projects/589741925103",
+          "quota_limit_value": "0",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:04,534 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:09,432 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:09,434 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:14,212 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "service": "generativelanguage.googleapis.com",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:14,212 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:21,178 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:21,178 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:27,060 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:27,062 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:32,827 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:32,828 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:36,723 - INFO - [app.py:237] - Successfully added 10 new leads
+2025-01-22 21:35:36,725 - INFO - [app.py:302] - Scheduler started
+2025-01-22 21:35:36,785 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-22 21:35:36,785 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-01-22 21:35:36,786 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-22 21:35:37,447 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-22 21:35:37,454 - INFO - [app.py:295] - Performing initial lead update
+2025-01-22 21:35:37,458 - INFO - [app.py:201] - Starting lead update process
+2025-01-22 21:35:37,460 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 21:35:39,030 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-22 21:35:39,030 - INFO - [app.py:87] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 21:35:39,031 - INFO - [app.py:225] - Created 10 new lead objects
+2025-01-22 21:35:40,743 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:40,744 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:44,592 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_location": "us-central2"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:44,593 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:48,465 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:48,466 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:52,335 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:52,336 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:56,211 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "consumer": "projects/589741925103",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:56,211 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:35:59,965 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "service": "generativelanguage.googleapis.com",
+          "consumer": "projects/589741925103",
+          "quota_limit_value": "0",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:35:59,965 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:36:03,686 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_location": "us-central2",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:36:03,686 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:36:07,418 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "service": "generativelanguage.googleapis.com",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:36:07,418 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:36:11,295 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_location": "us-central2",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "quota_limit_value": "0",
+          "consumer": "projects/589741925103",
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "service": "generativelanguage.googleapis.com"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:36:11,297 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:36:13,990 - INFO - [app.py:120] - Gemini API Response: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Generate Content API requests per minute' and limit 'GenerateContent request limit per minute for a region' of service 'generativelanguage.googleapis.com' for consumer 'project_number:589741925103'.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_location": "us-central2",
+          "quota_limit_value": "0",
+          "service": "generativelanguage.googleapis.com",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProjectPerRegion",
+          "consumer": "projects/589741925103"
+        }
+      },
+      {
+        "@type": "type.googleapis.com/google.rpc.Help",
+        "links": [
+          {
+            "description": "Request a higher quota limit.",
+            "url": "https://cloud.google.com/docs/quotas/help/request_increase"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+2025-01-22 21:36:13,990 - ERROR - [app.py:124] - Error calling Gemini API: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyDXzHb76UI3cFjiByzwCc4ygC8662CwrbE
+2025-01-22 21:36:16,091 - INFO - [app.py:237] - Successfully added 10 new leads
+2025-01-22 21:36:16,092 - INFO - [app.py:302] - Scheduler started
+2025-01-22 21:36:16,110 - WARNING - [_internal.py:97] -  * Debugger is active!
+2025-01-22 21:36:16,110 - INFO - [_internal.py:97] -  * Debugger PIN: 132-408-707
+2025-01-22 22:48:11,181 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-22 22:48:11,210 - INFO - [app.py:295] - Performing initial lead update
+2025-01-22 22:48:11,211 - INFO - [app.py:201] - Starting lead update process
+2025-01-22 22:48:11,211 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 10
+}
+2025-01-22 22:48:12,786 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-22 22:48:12,786 - INFO - [app.py:87] - Successfully retrieved 10 organizations from Crunchbase
+2025-01-22 22:48:12,787 - INFO - [app.py:225] - Created 10 new lead objects
+2025-01-22 22:48:15,679 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Impulse Mechanisms is a precision engineering company specializing in the design and manufacture of various mechanical components.  Their product line includes clamps, collars, spacers, slip clutches, and couplings, all critical for applications requiring precise control of motion and positioning.  These components find use in diverse industries needing high-quality, reliable fastening and power transmission solutions. The company likely serves original equipment manufacturers (OEMs) across various sectors, providing essential components integrated into larger machinery or systems.\",\n  \"industry\": \"Machinery Manufacturing\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27482422396668005
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 93,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 210
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:48:15,681 - INFO - [app.py:156] - Successfully enriched lead: Impulse Mechanisms
+2025-01-22 22:48:23,559 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"The State Chamber of Oklahoma is a business advocacy organization.  It lobbies for policies beneficial to Oklahoma businesses at the state level, providing research and analysis to support its positions.  It also offers member services, such as ChamberCare (likely a health insurance or benefits program), and conducts various initiatives to promote economic growth and development within the state.  Essentially, it acts as a voice for Oklahoma businesses, influencing policy and providing resources to its members.\",\n  \"industry\": \"Business Advocacy/Lobbying\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12982779535753974
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 94,
+    "candidatesTokenCount": 116,
+    "totalTokenCount": 210
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:48:23,561 - INFO - [app.py:156] - Successfully enriched lead: State Chamber of Oklahoma
+2025-01-22 22:48:35,698 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Lesonal is a company specializing in the automotive refinishing industry. They manufacture and supply a range of high-quality products used in repairing and repainting vehicles.  Their product line includes basecoats, clearcoats, and various additives designed for efficiency and superior results.  Lesonal caters to professional body shops and automotive repair facilities, focusing on providing solutions that improve both the speed and quality of the refinishing process.  The company competes in a market which demands both technological advancement in paint formulations and consistent, reliable performance.\",\n  \"industry\": \"Automotive Aftermarket\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28039547824120337
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 98,
+    "candidatesTokenCount": 129,
+    "totalTokenCount": 227
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:48:35,698 - INFO - [app.py:156] - Successfully enriched lead: Lesonal
+2025-01-22 22:48:44,967 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"SlickWin is a news publishing company specializing in articles related to Microsoft Windows operating systems.  Their content likely covers topics such as software updates, troubleshooting guides, reviews of Windows-compatible applications, and news about Microsoft's Windows ecosystem.  They cater to a tech-savvy audience interested in staying informed about all things Windows, potentially including both professional and consumer users.  Their business model likely relies on advertising revenue or subscription fees, or a combination of both.\",\n  \"industry\": \"Media and Publishing\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27180684733594584
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 86,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 203
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:48:44,968 - INFO - [app.py:156] - Successfully enriched lead: SlickWin
+2025-01-22 22:48:50,794 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Martin Investment Properties is a real estate management company specializing in the oversight and administration of residential properties.  Their services encompass the management of single-family homes, condominiums, and multi-family dwellings.  This includes tasks such as tenant acquisition and screening, rent collection, property maintenance, and financial reporting to property owners.  They act as intermediaries between property owners and tenants, streamlining operations and maximizing rental income for their clients.  Their focus is on optimizing the financial performance and operational efficiency of investment properties.\",\n  \"industry\": \"Real Estate Management\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18143055930970206
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 94,
+    "candidatesTokenCount": 126,
+    "totalTokenCount": 220
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:48:50,795 - INFO - [app.py:156] - Successfully enriched lead: Martin Investment Properties
+2025-01-22 22:48:58,166 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Pollen Count App & Alerts is a mobile application focused on providing real-time pollen count data and related allergy information to users.  The app helps individuals manage their allergies by offering personalized alerts based on their location and pollen sensitivities.  Its core functionality centers on data aggregation and presentation, leveraging existing meteorological and pollen data sources.  This allows individuals to plan daily activities, prepare for allergy symptoms, and potentially reduce their allergy impact through informed decision-making.  The app likely incorporates features such as customizable alerts, symptom tracking, and potentially integration with other health and wellness apps.\",\n  \"industry\": \"Health & Wellness / Mobile Application / Weather & Environmental Data\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.44902033419222442
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 96,
+    "candidatesTokenCount": 148,
+    "totalTokenCount": 244
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:48:58,171 - INFO - [app.py:156] - Successfully enriched lead: Pollen Count App & Alerts
+2025-01-22 22:49:04,841 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"CareNote, a SaaS company, likely provides software solutions for the healthcare industry.  This could encompass various applications such as electronic health records (EHR), patient relationship management (PRM), telehealth platforms, or other clinical workflow optimization tools.  The SaaS model suggests a subscription-based service offering scalable and accessible software to healthcare providers, improving efficiency and data management.  The specific functionality would need further clarification, but the core business is centered around providing technology to the healthcare sector.\",\n  \"industry\": \"Healthcare Information Technology (Health IT)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.31064264561102645
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 75,
+    "candidatesTokenCount": 123,
+    "totalTokenCount": 198
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-22 22:49:04,842 - INFO - [app.py:156] - Successfully enriched lead: CareNote
+2025-01-23 00:06:33,093 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-23 00:06:33,097 - INFO - [app.py:295] - Performing initial lead update
+2025-01-23 00:06:33,097 - INFO - [app.py:201] - Starting lead update process
+2025-01-23 00:06:33,097 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:06:35,023 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-23 00:06:35,024 - INFO - [app.py:87] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:06:35,025 - INFO - [app.py:225] - Created 5 new lead objects
+2025-01-23 00:06:37,813 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"OMEGA CRYPTO RECOVERY SPECIALIST operates in the cybersecurity and cryptocurrency recovery niche. They offer services to individuals and businesses who have lost or had their cryptocurrencies stolen, often due to scams or hacking incidents.  Their expertise likely involves blockchain analysis, forensic investigation, and potentially legal assistance to recover lost digital assets.  This is a relatively new and rapidly evolving industry driven by the increasing value and adoption of cryptocurrencies and the corresponding rise in related crime.\",\n  \"industry\": \"Cybersecurity & Cryptocurrency Recovery Services\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22575302447302867
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 110,
+    "candidatesTokenCount": 118,
+    "totalTokenCount": 228
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:06:37,814 - INFO - [app.py:156] - Successfully enriched lead: Hire a Hacker to Recover Lost or Stolen CRYPTO / BITCOIN, Company to Recover Crypto After Scam
+2025-01-23 00:06:49,465 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Eagleland operates within the retail industry, likely encompassing the buying and selling of goods to consumers.  The specifics of their merchandise or target market are unknown, leaving room for a broad range of possible business models, from brick-and-mortar stores to online e-commerce platforms or a hybrid approach.  Further information is needed to determine the specific niche within the retail sector, such as apparel, grocery, electronics, or specialized goods.  Competitive analysis would require knowledge of their target demographic, pricing strategies, and geographic reach.\",\n  \"industry\": \"Retail\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.49654346704483032
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 75,
+    "candidatesTokenCount": 128,
+    "totalTokenCount": 203
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:06:49,466 - INFO - [app.py:156] - Successfully enriched lead: Eagleland
+2025-01-23 00:06:56,646 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Neerja School of Aviation is a leading aviation institute located in Kerala, India.  They provide comprehensive training programs in various aspects of the aviation industry, including pilot training (implied), airport management, and cabin crew training.  The school focuses on delivering high-quality education and preparing students for successful careers in the aviation sector.  Their emphasis on being the 'best' suggests a commitment to competitive curriculum and potentially advanced facilities or experienced instructors.  The school likely caters to both domestic and potentially international students seeking aviation-related careers.\",\n  \"industry\": \"Education/Training (specifically Aviation Training)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22376681418314467
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 98,
+    "candidatesTokenCount": 137,
+    "totalTokenCount": 235
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:06:56,646 - INFO - [app.py:156] - Successfully enriched lead: Neerja School of Aviation
+2025-01-23 00:07:04,402 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Greenwich ENT is a medical practice specializing in otolaryngology (ENT), encompassing the diagnosis and treatment of ear, nose, and throat disorders, as well as head and neck surgeries.  They offer a range of services addressing conditions affecting hearing, balance, smell, taste, and voice.  The practice likely employs physicians, nurses, and administrative staff to facilitate patient care, scheduling, and billing.  Competition comes from other ENT practices, hospitals with ENT departments, and related specialists like audiologists.  Success hinges on attracting and retaining patients, maintaining high-quality care, and adapting to evolving medical technology and healthcare regulations.\",\n  \"industry\": \"Healthcare\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22914720061641411
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 100,
+    "candidatesTokenCount": 149,
+    "totalTokenCount": 249
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:04,403 - INFO - [app.py:156] - Successfully enriched lead: Greenwich ENT
+2025-01-23 00:07:10,104 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"FlashProxy is a proxy service provider, offering intermediary servers that mask a user's IP address and location.  This allows users to access geographically restricted content, enhance online privacy and security, and improve web scraping efficiency.  The company operates within a competitive market encompassing various proxy types (e.g., residential, datacenter, mobile) and pricing models, serving individual users, businesses requiring data anonymity, and organizations needing enhanced online security.\",\n  \"industry\": \"Information Technology and Services\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27129096315618145
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 77,
+    "candidatesTokenCount": 114,
+    "totalTokenCount": 191
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:10,105 - INFO - [app.py:156] - Successfully enriched lead: FlashProxy
+2025-01-23 00:07:13,327 - INFO - [app.py:237] - Successfully added 5 new leads
+2025-01-23 00:07:13,328 - INFO - [app.py:302] - Scheduler started
+2025-01-23 00:07:13,381 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 00:07:13,381 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-01-23 00:07:13,382 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-23 00:07:13,609 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-23 00:07:13,612 - INFO - [app.py:295] - Performing initial lead update
+2025-01-23 00:07:13,612 - INFO - [app.py:201] - Starting lead update process
+2025-01-23 00:07:13,612 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:07:14,992 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-23 00:07:14,993 - INFO - [app.py:87] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:07:14,994 - INFO - [app.py:225] - Created 5 new lead objects
+2025-01-23 00:07:16,896 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Turina Tech, being a technology company with limited further description, operates within the broad technology sector. This encompasses a vast range of activities, including software development, hardware manufacturing, IT services, data analytics, and more. Without specific details about their products or services, precise industry classification is impossible.  It's likely they engage in one or more specialized areas within technology, such as software as a service (SaaS), cybersecurity, artificial intelligence (AI), or cloud computing. Further information is needed for a more accurate assessment.\",\n  \"industry\": \"Technology\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.284510708594507
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 77,
+    "candidatesTokenCount": 129,
+    "totalTokenCount": 206
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:16,896 - INFO - [app.py:156] - Successfully enriched lead: Turina Tech
+2025-01-23 00:07:22,869 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"OMEGA CRYPTO RECOVERY SPECIALIST operates in the cryptocurrency recovery niche. They claim to help individuals retrieve lost or stolen cryptocurrencies, including Bitcoin, after scams or other incidents.  Their services likely involve technical expertise in blockchain analysis, cryptocurrency exchanges, and potentially legal or investigative processes.  However, it's crucial to note that the legitimacy and efficacy of such services vary significantly, and caution is advised when considering using them.  Consumers should thoroughly research and vet any such company before engaging their services.\",\n  \"industry\": \"Cybersecurity/Information Technology Services (specifically, cryptocurrency recovery)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32035170820422637
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 110,
+    "candidatesTokenCount": 133,
+    "totalTokenCount": 243
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:22,871 - INFO - [app.py:156] - Successfully enriched lead: Hire a Hacker to Recover Lost or Stolen CRYPTO / BITCOIN, Company to Recover Crypto After Scam
+2025-01-23 00:07:27,810 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Eagleland operates within the retail industry, focusing on the sale of goods directly to consumers.  The lack of further detail in the description prevents a deeper analysis into specific product categories or retail formats (e.g., brick-and-mortar, e-commerce, specialty, etc.).  Success in this highly competitive market requires effective marketing, strong supply chain management, and a compelling customer experience.  Profitability is dependent on factors such as pricing strategies, inventory control, and operational efficiency.  External factors like economic conditions and consumer spending habits significantly impact performance.\",\n  \"industry\": \"Retail\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.35786559493453413
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 75,
+    "candidatesTokenCount": 135,
+    "totalTokenCount": 210
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:27,812 - INFO - [app.py:156] - Successfully enriched lead: Eagleland
+2025-01-23 00:07:32,711 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Neerja School of Aviation is a leading aviation training institute located in Kerala, India.  They provide comprehensive courses in various aspects of the aviation industry, including pilot training (implied, though not explicitly stated), airport management, and cabin crew training.  The school aims to equip students with the skills and knowledge necessary for successful careers in aviation, focusing on delivering high-quality education and practical training to meet the demands of the growing aviation sector in India and globally.\",\n  \"industry\": \"Education (specifically, Aviation Training)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.13072618109280945
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 98,
+    "candidatesTokenCount": 122,
+    "totalTokenCount": 220
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:32,712 - INFO - [app.py:156] - Successfully enriched lead: Neerja School of Aviation
+2025-01-23 00:07:37,592 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Greenwich ENT is a medical practice specializing in otolaryngology (ENT), focusing on the diagnosis and treatment of ear, nose, and throat disorders, as well as head and neck surgeries.  They provide comprehensive care for a wide range of conditions affecting these areas, likely including but not limited to infections, allergies, hearing loss, balance problems, sinus issues, and throat cancers.  The practice caters to patients requiring both routine check-ups and complex surgical interventions within the ENT field. Their services are likely delivered through outpatient clinics and potentially affiliated hospitals.\",\n  \"industry\": \"Healthcare\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.14191092306108616
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 100,
+    "candidatesTokenCount": 134,
+    "totalTokenCount": 234
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:07:37,593 - INFO - [app.py:156] - Successfully enriched lead: Greenwich ENT
+2025-01-23 00:07:39,711 - INFO - [app.py:237] - Successfully added 5 new leads
+2025-01-23 00:07:39,712 - INFO - [app.py:302] - Scheduler started
+2025-01-23 00:07:39,730 - WARNING - [_internal.py:97] -  * Debugger is active!
+2025-01-23 00:07:39,835 - INFO - [_internal.py:97] -  * Debugger PIN: 825-551-086
+2025-01-23 00:07:44,251 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:07:44] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:07:44,252 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:07:44] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:07:44,254 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:07:44] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:07:44,276 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:07:44] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:07:44,281 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:07:44] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:07:44,286 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:07:44] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:08:42,663 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:08:42] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:08:42,665 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:08:42] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:08:42,668 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:08:42] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:08:42,680 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:08:42] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:08:42,706 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:08:42] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:08:42,708 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:08:42] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:09:05,521 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:05] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:09:05,533 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:05] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:09:05,550 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:05] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:09:05,554 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:05] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:09:05,569 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:05] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:09:05,583 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:05] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:09:24,333 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:24] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:09:24,331 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:24] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:09:24,339 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:24] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:09:24,371 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:24] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:09:24,390 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:24] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:09:24,392 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:09:24] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:13:40,112 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:13:40] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:13:40,114 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:13:40] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:13:40,116 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:13:40] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:13:40,122 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:13:40] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:13:40,130 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:13:40] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:13:40,133 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:13:40] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:14:43,470 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:14:43] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:14:43,472 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:14:43] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:14:43,489 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:14:43] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:14:43,505 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:14:43] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:14:43,507 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:14:43] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:14:43,511 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:14:43] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:16:02,821 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:16:02] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:16:02,821 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:16:02] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:16:02,840 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:16:02] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:16:02,854 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:16:02] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:16:02,861 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:16:02] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:16:02,868 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:16:02] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:17:46,933 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:46] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:17:46,952 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:46] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:17:46,959 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:46] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:17:46,980 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:46] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:17:46,981 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:46] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:17:46,993 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:46] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:17:54,392 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:54] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:17:54,405 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:54] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:17:54,413 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:54] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:17:54,447 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:54] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:17:54,449 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:54] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:17:54,448 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:17:54] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:18:40,314 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:18:40] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:18:40,316 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:18:40] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:18:40,333 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:18:40] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:18:57,869 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:18:57] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:18:57,876 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:18:57] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:18:57,880 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:18:57] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:19:43,596 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:19:43] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:19:43,597 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:19:43] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:19:43,598 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:19:43] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:20:09,069 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:09] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:20:09,079 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:09] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:20:09,081 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:09] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:20:20,439 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:20] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:20:20,441 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:20] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:20:20,456 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:20] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:20:53,909 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:53] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:20:53,912 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:53] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:20:53,916 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:53] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:20:53,948 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:53] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:20:53,955 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:53] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:20:53,970 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:20:53] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:21:07,671 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:21:07] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:21:07,675 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:21:07] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:21:07,688 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:21:07] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:27:39,662 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-23 00:27:39,664 - INFO - [app.py:295] - Performing initial lead update
+2025-01-23 00:27:39,664 - INFO - [app.py:201] - Starting lead update process
+2025-01-23 00:27:39,665 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:27:41,361 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-23 00:27:41,361 - INFO - [app.py:87] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:27:41,362 - INFO - [app.py:225] - Created 5 new lead objects
+2025-01-23 00:27:44,267 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Columbia Midtown Florist is a local flower shop providing floral arrangements and related services to customers in the Midtown Manhattan area of New York City.  They cater to a variety of needs, likely including everyday bouquets, special occasion arrangements (weddings, funerals, birthdays), corporate events, and potentially plant sales. Their location near Rockefeller Center suggests a focus on high-traffic areas and potentially corporate clientele.  Competition includes other local florists, online flower delivery services, and grocery stores offering floral arrangements.\",\n  \"industry\": \"Florist/Floral Retail\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.25936242675781251
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 125,
+    "totalTokenCount": 222
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:27:44,268 - INFO - [app.py:156] - Successfully enriched lead: Columbia Midtown Florist
+2025-01-23 00:27:52,307 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Digital Notes provides an offline-first note-taking application emphasizing real-time collaboration and user privacy.  This allows users to create and edit notes even without an internet connection, seamlessly syncing changes when online.  The focus on privacy suggests robust data security measures. The real-time collaboration feature enhances teamwork and productivity, targeting individuals and teams needing secure, reliable note-taking solutions for various purposes, from personal journaling to professional project management.\",\n  \"industry\": \"Software and Application\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.2317739725112915
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 87,
+    "candidatesTokenCount": 112,
+    "totalTokenCount": 199
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:27:52,309 - INFO - [app.py:156] - Successfully enriched lead: Digital Notes
+2025-01-23 00:27:59,998 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Given the name 'Scope Wizard' and the 'Coming Soon' status, it's difficult to definitively determine the company's precise function. However, the name suggests a business related to defining, managing, or optimizing 'scope,' which could apply to several industries.  Potential areas include project management software, where the tool helps define and track project scopes;  business consulting, offering services to clarify and refine project scope; or potentially a niche software solution for specific industries needing precise scope delineation, such as construction or engineering.\",\n  \"industry\": \"Software/Project Management/Business Consulting (uncertain)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.39147679127045792
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 77,
+    "candidatesTokenCount": 137,
+    "totalTokenCount": 214
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:27:59,999 - INFO - [app.py:156] - Successfully enriched lead: Scope Wizard
+2025-01-23 00:28:08,487 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Prettyclose provides branded social media content and marketing materials specifically for real estate agents.  They aim to help agents enhance their online presence, attract more followers, and ultimately generate leads through professionally designed posts and collateral.  Their service focuses on streamlining the marketing process for busy real estate professionals, offering a convenient solution for consistent and engaging social media content. This reduces the time agents spend on marketing tasks, allowing them to focus more on client interactions and property sales.\",\n  \"industry\": \"Marketing and Advertising (Real Estate Niche)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22534003257751464
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 95,
+    "candidatesTokenCount": 120,
+    "totalTokenCount": 215
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:08,489 - INFO - [app.py:156] - Successfully enriched lead: prettyclose
+2025-01-23 00:28:16,293 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Integrity Homes is a local home builder and general contractor based in Grand Junction, Colorado. They specialize in constructing custom homes, catering to clients' specific needs and preferences.  This involves managing all aspects of the building process, from initial design and planning to final construction and completion.  As a local business, they likely focus on serving the immediate community, understanding local building codes and regulations, and leveraging relationships with area suppliers and subcontractors. Their emphasis on custom homes suggests a focus on higher-end residential construction, potentially targeting clients seeking personalized and unique living spaces.\",\n  \"industry\": \"Residential Construction\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22202744660554108
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 95,
+    "candidatesTokenCount": 135,
+    "totalTokenCount": 230
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:16,294 - INFO - [app.py:156] - Successfully enriched lead: Integrity Homes
+2025-01-23 00:28:20,522 - INFO - [app.py:237] - Successfully added 5 new leads
+2025-01-23 00:28:20,524 - INFO - [app.py:302] - Scheduler started
+2025-01-23 00:28:20,557 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 00:28:20,557 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-01-23 00:28:20,558 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-23 00:28:20,875 - INFO - [app.py:46] - Configured to use direct API calls for Gemini model
+2025-01-23 00:28:20,880 - INFO - [app.py:295] - Performing initial lead update
+2025-01-23 00:28:20,881 - INFO - [app.py:201] - Starting lead update process
+2025-01-23 00:28:20,882 - INFO - [app.py:73] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:28:22,288 - INFO - [app.py:82] - Crunchbase API Response Status: 200
+2025-01-23 00:28:22,288 - INFO - [app.py:87] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:28:22,289 - INFO - [app.py:225] - Created 5 new lead objects
+2025-01-23 00:28:25,269 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Columbia Midtown Florist is a local flower shop situated in Midtown Manhattan, near Rockefeller Center. They provide floral arrangements and bouquets for various occasions, likely including weddings, funerals, corporate events, and everyday personal gifts.  Their proximity to a major tourist and business hub suggests a clientele base encompassing both individual consumers and corporate clients.  Competition likely includes other local florists and potentially larger national chains offering delivery services in the area.  Success depends on factors such as product quality, customer service, competitive pricing, and effective marketing within their localized market.\",\n  \"industry\": \"Floral Design and Retail\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19199154981926306
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 134,
+    "totalTokenCount": 231
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:25,270 - INFO - [app.py:156] - Successfully enriched lead: Columbia Midtown Florist
+2025-01-23 00:28:30,338 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Digital Notes provides an offline-first note-taking application emphasizing real-time collaboration and user privacy.  Unlike cloud-only solutions, it allows users to create and edit notes even without an internet connection, syncing changes when connectivity is restored.  The focus on collaboration suggests features like shared notebooks and simultaneous editing capabilities.  Prioritizing privacy implies robust security measures to protect user data, potentially including end-to-end encryption and data minimization practices.  The app likely competes in the productivity and note-taking software market.\",\n  \"industry\": \"Software - Productivity & Note-Taking\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.26385627115579474
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 87,
+    "candidatesTokenCount": 133,
+    "totalTokenCount": 220
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:30,340 - INFO - [app.py:156] - Successfully enriched lead: Digital Notes
+2025-01-23 00:28:35,314 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Given the name \\\"Scope Wizard\\\" and the lack of a description, it's likely that the company operates in a field requiring precise measurement, planning, or project management.  Possible industries include construction project management (defining project scope), software development (defining project scope and features), or even a specialized tool for surveying or engineering.  The \\\"Wizard\\\" suggests an ease-of-use aspect to a potentially complex process.  Further information is needed to definitively determine its exact function.\",\n  \"industry\": \"Technology/Software or Construction/Engineering\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.28746541341145831
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 77,
+    "candidatesTokenCount": 126,
+    "totalTokenCount": 203
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:35,315 - INFO - [app.py:156] - Successfully enriched lead: Scope Wizard
+2025-01-23 00:28:40,293 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"prettyclose provides branded social media content and marketing materials specifically for real estate agents.  They aim to help agents enhance their online presence, increase their social media following, and ultimately generate more leads.  Their service focuses on creating visually appealing and professionally designed posts and collateral, eliminating the need for agents to invest significant time and resources in content creation themselves. This allows real estate professionals to focus on client interactions and property transactions.\",\n  \"industry\": \"Real Estate Marketing and Advertising\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21881613860259186
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 95,
+    "candidatesTokenCount": 111,
+    "totalTokenCount": 206
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:40,294 - INFO - [app.py:156] - Successfully enriched lead: prettyclose
+2025-01-23 00:28:45,521 - INFO - [app.py:120] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Integrity Homes is a local home builder and general contractor based in Grand Junction, Colorado.  They specialize in constructing custom homes, catering to clients' specific needs and preferences throughout the entire building process. This likely includes site preparation, design collaboration, material selection, construction management, and final project delivery.  Their focus on custom homes suggests a higher-end market niche within the broader home construction industry, potentially targeting discerning clients seeking unique and personalized living spaces.  Competition would come from other local builders, both custom and production builders, operating in the Grand Junction area.\",\n  \"industry\": \"Construction\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.30687363236038773
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 95,
+    "candidatesTokenCount": 135,
+    "totalTokenCount": 230
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:28:45,522 - INFO - [app.py:156] - Successfully enriched lead: Integrity Homes
+2025-01-23 00:28:47,688 - INFO - [app.py:237] - Successfully added 5 new leads
+2025-01-23 00:28:47,690 - INFO - [app.py:302] - Scheduler started
+2025-01-23 00:28:47,704 - WARNING - [_internal.py:97] -  * Debugger is active!
+2025-01-23 00:28:47,705 - INFO - [_internal.py:97] -  * Debugger PIN: 825-551-086
+2025-01-23 00:31:21,995 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:31:21] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:31:21,997 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:31:21] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:31:22,003 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:31:22] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:31:22,011 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:31:22] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:31:22,053 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:31:22] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:31:22,060 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:31:22] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:35:37,526 - INFO - [app.py:48] - Configured to use direct API calls for Gemini model
+2025-01-23 00:35:37,528 - INFO - [app.py:297] - Performing initial lead update
+2025-01-23 00:35:37,528 - INFO - [app.py:203] - Starting lead update process
+2025-01-23 00:35:37,528 - INFO - [app.py:75] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:35:39,444 - INFO - [app.py:84] - Crunchbase API Response Status: 200
+2025-01-23 00:35:39,444 - INFO - [app.py:89] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:35:39,444 - INFO - [app.py:227] - Created 5 new lead objects
+2025-01-23 00:35:42,241 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"OnRanko is a technology company specializing in leveraging artificial intelligence (AI) to enhance digital marketing strategies.  They offer solutions in marketing automation, streamlining repetitive tasks and improving efficiency.  Their expertise extends to content marketing, using AI to optimize content creation, distribution, and performance.  Essentially, OnRanko helps businesses improve their online presence and marketing ROI through AI-powered tools and services.\",\n  \"industry\": \"Marketing Technology (MarTech)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.099319395029319912
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 86,
+    "candidatesTokenCount": 106,
+    "totalTokenCount": 192
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:35:42,243 - INFO - [app.py:158] - Successfully enriched lead: OnRanko
+2025-01-23 00:35:48,674 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"SEO Anchor Point is a digital marketing agency focused on search engine optimization (SEO). They develop and implement strategies to improve clients' online visibility in search engine results pages (SERPs).  Their services likely include keyword research, on-page optimization, off-page optimization (link building), technical SEO, and potentially content marketing to attract targeted traffic and increase website rankings.  Essentially, they help businesses improve their organic search performance to generate leads and sales.\",\n  \"industry\": \"Digital Marketing\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10774579801057514
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 96,
+    "candidatesTokenCount": 114,
+    "totalTokenCount": 210
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:35:48,676 - INFO - [app.py:158] - Successfully enriched lead: SEO Anchor Point
+2025-01-23 00:35:56,684 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Lanai offers an AI-powered platform designed to optimize human-AI collaboration within enterprises.  Their solution focuses on three key areas: identifying opportunities for AI integration, safeguarding against potential risks associated with AI deployment (like bias or security vulnerabilities), and accelerating the adoption and effectiveness of AI initiatives.  This involves likely providing tools for AI project management, risk assessment, and employee training, ultimately aiming to maximize the value derived from AI investments while mitigating potential downsides.\",\n  \"industry\": \"Artificial Intelligence (AI) Software and Services\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.16458632729270242
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 121,
+    "totalTokenCount": 218
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:35:56,685 - INFO - [app.py:158] - Successfully enriched lead: Lanai
+2025-01-23 00:36:04,213 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Columbia Midtown Florist is a retail flower shop operating in the Midtown Manhattan area of New York City, near Rockefeller Center. They provide floral arrangements and related services for various occasions, such as weddings, funerals, corporate events, and everyday gifting.  Their location in a high-traffic, high-density area suggests a focus on walk-in customers and local businesses. Competition likely includes other local florists and larger national chains. Success depends on factors such as quality of flowers, design expertise, customer service, and effective marketing to reach both individuals and corporate clients.\",\n  \"industry\": \"Floral Retail\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.25257455601411705
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 136,
+    "totalTokenCount": 233
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:04,214 - INFO - [app.py:158] - Successfully enriched lead: Columbia Midtown Florist
+2025-01-23 00:36:10,201 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Digital Notes provides an offline-first note-taking application that emphasizes real-time collaboration and user privacy.  Unlike cloud-only solutions, it allows users to work even without internet connectivity, ensuring continuous access to their notes. The real-time collaboration feature enables seamless teamwork, while the focus on privacy safeguards user data.  This positions Digital Notes to compete in a market seeking both convenience and security in note-taking, appealing to professionals, students, and individuals prioritizing data protection.\",\n  \"industry\": \"Software\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.32279535501944917
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 87,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 206
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:10,201 - INFO - [app.py:158] - Successfully enriched lead: Digital Notes
+2025-01-23 00:36:12,365 - INFO - [app.py:239] - Successfully added 5 new leads
+2025-01-23 00:36:12,366 - INFO - [app.py:304] - Scheduler started
+2025-01-23 00:36:12,386 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 00:36:12,389 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-01-23 00:36:12,390 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-23 00:36:12,748 - INFO - [app.py:48] - Configured to use direct API calls for Gemini model
+2025-01-23 00:36:12,749 - INFO - [app.py:297] - Performing initial lead update
+2025-01-23 00:36:12,749 - INFO - [app.py:203] - Starting lead update process
+2025-01-23 00:36:12,750 - INFO - [app.py:75] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:36:14,268 - INFO - [app.py:84] - Crunchbase API Response Status: 200
+2025-01-23 00:36:14,268 - INFO - [app.py:89] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:36:14,269 - INFO - [app.py:227] - Created 5 new lead objects
+2025-01-23 00:36:19,411 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"OnRanko is a technology company specializing in leveraging artificial intelligence (AI) to enhance digital marketing strategies.  They offer solutions encompassing marketing automation, streamlining repetitive tasks, and content marketing, focusing on creating and distributing high-quality, engaging content.  Their AI-powered tools likely analyze data to optimize campaigns, improve targeting, and measure performance, ultimately aiming to increase client return on investment in digital marketing efforts.  This combines elements of marketing services and AI software development.\",\n  \"industry\": \"Marketing and Advertising Technology (MarTech)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.31099161287633387
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 86,
+    "candidatesTokenCount": 123,
+    "totalTokenCount": 209
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:19,412 - INFO - [app.py:158] - Successfully enriched lead: OnRanko
+2025-01-23 00:36:24,513 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"SEO Anchor Point is a digital marketing agency focused on search engine optimization (SEO). They develop and implement strategies to improve clients' online visibility in search engine results pages (SERPs).  Their services likely include keyword research, on-page optimization, off-page optimization (link building), technical SEO, and potentially content marketing to drive organic traffic and achieve higher rankings.  They target businesses seeking to increase their online presence and generate more targeted leads through improved search engine performance.\",\n  \"industry\": \"Digital Marketing\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12968420578261552
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 96,
+    "candidatesTokenCount": 118,
+    "totalTokenCount": 214
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:24,514 - INFO - [app.py:158] - Successfully enriched lead: SEO Anchor Point
+2025-01-23 00:36:30,283 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Lanai is a technology company specializing in Artificial Intelligence (AI) solutions for enterprise organizations.  Their platform focuses on optimizing human-AI collaboration by assisting enterprises in identifying opportunities for AI integration, ensuring responsible AI implementation (including data security and ethical considerations), and accelerating the adoption and effectiveness of AI systems within their workflows.  This involves aspects of AI consulting, platform development, and potentially AI security.  They aim to empower businesses to leverage AI effectively and responsibly.\",\n  \"industry\": \"Artificial Intelligence (AI) Software and Services\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.35509306485535669
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 122,
+    "totalTokenCount": 219
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:30,284 - INFO - [app.py:158] - Successfully enriched lead: Lanai
+2025-01-23 00:36:36,321 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Columbia Midtown Florist is a local flower shop situated in Midtown Manhattan, New York City, near Rockefeller Center.  They provide floral arrangements and bouquets for a variety of occasions, including weddings, funerals, corporate events, and everyday gifting.  Their services likely include flower delivery within the Midtown area, potentially offering same-day delivery options to cater to urgent needs.  Competition includes other local florists, online flower delivery services, and potentially grocery stores offering floral sections.  Success hinges on factors like product quality, customer service, convenient location, and effective marketing within their local community.\",\n  \"industry\": \"Floristry and Flower Retail\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23849241883604677
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 143,
+    "totalTokenCount": 240
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:36,322 - INFO - [app.py:158] - Successfully enriched lead: Columbia Midtown Florist
+2025-01-23 00:36:40,487 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Digital Notes provides an offline-first note-taking application emphasizing real-time collaboration and user privacy.  Unlike cloud-dependent solutions, it allows users to create and edit notes even without an internet connection, syncing changes when online.  The focus on collaboration sets it apart by enabling multiple users to work on notes simultaneously.  Strong privacy features are a key differentiator, suggesting a commitment to data security.  This combination targets users who value both productivity and data control, potentially spanning various professional and personal use cases.\",\n  \"industry\": \"Software - Note-Taking & Productivity Apps\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.335133201197574
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 87,
+    "candidatesTokenCount": 133,
+    "totalTokenCount": 220
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:36:40,489 - INFO - [app.py:158] - Successfully enriched lead: Digital Notes
+2025-01-23 00:36:42,658 - INFO - [app.py:239] - Successfully added 5 new leads
+2025-01-23 00:36:42,660 - INFO - [app.py:304] - Scheduler started
+2025-01-23 00:36:42,677 - WARNING - [_internal.py:97] -  * Debugger is active!
+2025-01-23 00:36:42,678 - INFO - [_internal.py:97] -  * Debugger PIN: 825-551-086
+2025-01-23 00:36:52,925 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:36:52,927 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:36:52,929 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:36:52,955 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:36:52,958 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:36:52,963 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/leads HTTP/1.1" 200 -
