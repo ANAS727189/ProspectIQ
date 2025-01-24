@@ -12257,3 +12257,299 @@
 2025-01-23 00:36:52,955 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/stats HTTP/1.1" 200 -
 2025-01-23 00:36:52,958 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/errors HTTP/1.1" 200 -
 2025-01-23 00:36:52,963 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:36:52] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:45:59,621 - INFO - [app.py:48] - Configured to use direct API calls for Gemini model
+2025-01-23 00:45:59,622 - INFO - [app.py:297] - Performing initial lead update
+2025-01-23 00:45:59,622 - INFO - [app.py:203] - Starting lead update process
+2025-01-23 00:45:59,622 - INFO - [app.py:75] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:46:05,115 - INFO - [app.py:84] - Crunchbase API Response Status: 200
+2025-01-23 00:46:05,116 - INFO - [app.py:89] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:46:05,117 - INFO - [app.py:227] - Created 5 new lead objects
+2025-01-23 00:46:08,087 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Mesta is a fintech company revolutionizing international payments by leveraging a hybrid system of fiat currencies and stablecoins.  This approach aims to offer faster, cheaper, and more transparent cross-border transactions compared to traditional methods.  By integrating stablecoins into payment rails, Mesta seeks to reduce reliance on volatile cryptocurrencies while still benefiting from blockchain technology's efficiency.  Their innovation targets businesses and individuals needing seamless and cost-effective global payment solutions, potentially disrupting existing payment processors and remittance services.\",\n  \"industry\": \"Fintech (specifically, Payments and Remittances)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.17853434031246274
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 93,
+    "candidatesTokenCount": 131,
+    "totalTokenCount": 224
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:08,089 - INFO - [app.py:158] - Successfully enriched lead: Mesta
+2025-01-23 00:46:14,134 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"LotusAI is a strategic consulting firm focused on artificial intelligence (AI). They advise businesses on how to effectively integrate and utilize AI technologies to improve operations, gain a competitive edge, and achieve strategic goals.  Their services likely encompass areas such as AI strategy development, technology selection, implementation support, and ongoing optimization.  They bridge the gap between business needs and the complex world of AI, providing tailored solutions for various industries.\",\n  \"industry\": \"Information Technology and Services; specifically, Artificial Intelligence (AI) Consulting\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.10579382471677636
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 92,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 211
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:14,137 - INFO - [app.py:158] - Successfully enriched lead: LotusAI
+2025-01-23 00:46:20,728 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"OnRanko is a technology company specializing in leveraging artificial intelligence (AI) to enhance digital marketing strategies.  They offer a suite of services encompassing marketing automation, streamlining repetitive tasks and improving efficiency, and content marketing, focusing on creating and distributing high-quality content to attract and engage target audiences.  Their AI-powered solutions likely aim to optimize campaign performance, improve ROI, and provide data-driven insights for better decision-making in digital marketing.\",\n  \"industry\": \"Marketing Technology (MarTech)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.12323413751064202
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 86,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 203
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:20,729 - INFO - [app.py:158] - Successfully enriched lead: OnRanko
+2025-01-23 00:46:25,782 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"SEO Anchor Point is a digital marketing agency focused on search engine optimization (SEO). They develop and implement strategies to improve clients' online visibility in search engine results pages (SERPs), ultimately driving more targeted traffic to their websites.  Their services likely encompass keyword research, on-page and off-page optimization, technical SEO, link building, and content strategy, all aimed at increasing organic search rankings and generating qualified leads for their clients.  They operate within the competitive landscape of digital marketing, vying for clients with other agencies offering similar SEO and related services.\",\n  \"industry\": \"Digital Marketing\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.18632623177987559
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 96,
+    "candidatesTokenCount": 135,
+    "totalTokenCount": 231
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:25,784 - INFO - [app.py:158] - Successfully enriched lead: SEO Anchor Point
+2025-01-23 00:46:30,563 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Lanai offers an AI-powered platform designed to facilitate and optimize the integration of artificial intelligence into enterprise workflows.  Their solution focuses on three key areas: identifying suitable AI applications within an organization, ensuring the secure and ethical implementation of AI systems, and maximizing the collaborative potential between human employees and AI technologies.  This allows businesses to leverage AI effectively, mitigating risks and accelerating innovation.\",\n  \"industry\": \"Artificial Intelligence (AI) Software\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.24150859392606294
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 104,
+    "totalTokenCount": 201
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:30,564 - INFO - [app.py:158] - Successfully enriched lead: Lanai
+2025-01-23 00:46:32,707 - INFO - [app.py:239] - Successfully added 5 new leads
+2025-01-23 00:46:32,708 - INFO - [app.py:304] - Scheduler started
+2025-01-23 00:46:32,729 - INFO - [_internal.py:97] - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-23 00:46:32,729 - INFO - [_internal.py:97] - [33mPress CTRL+C to quit[0m
+2025-01-23 00:46:32,730 - INFO - [_internal.py:97] -  * Restarting with stat
+2025-01-23 00:46:33,038 - INFO - [app.py:48] - Configured to use direct API calls for Gemini model
+2025-01-23 00:46:33,040 - INFO - [app.py:297] - Performing initial lead update
+2025-01-23 00:46:33,040 - INFO - [app.py:203] - Starting lead update process
+2025-01-23 00:46:33,040 - INFO - [app.py:75] - Sending request to Crunchbase API with payload: {
+  "field_ids": [
+    "name",
+    "website_url",
+    "short_description"
+  ],
+  "order": [
+    {
+      "field_id": "created_at",
+      "sort": "desc"
+    }
+  ],
+  "limit": 5
+}
+2025-01-23 00:46:34,385 - INFO - [app.py:84] - Crunchbase API Response Status: 200
+2025-01-23 00:46:34,386 - INFO - [app.py:89] - Successfully retrieved 5 organizations from Crunchbase
+2025-01-23 00:46:34,386 - INFO - [app.py:227] - Created 5 new lead objects
+2025-01-23 00:46:37,094 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Mesta is a fintech company revolutionizing international payments by building a hybrid payment infrastructure.  It leverages both traditional fiat currencies and stablecoins to offer a faster, cheaper, and more efficient alternative to existing global payment networks. This approach aims to overcome the limitations and high costs associated with traditional cross-border transactions, potentially benefiting businesses and individuals conducting international commerce.  The use of stablecoins mitigates volatility risks associated with traditional cryptocurrencies.\",\n  \"industry\": \"Fintech (specifically, Payments & Remittances)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.23762086232503254
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 93,
+    "candidatesTokenCount": 120,
+    "totalTokenCount": 213
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:37,095 - INFO - [app.py:158] - Successfully enriched lead: Mesta
+2025-01-23 00:46:42,043 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"LotusAI is a strategic consulting firm specializing in artificial intelligence (AI) services. They help businesses understand, implement, and optimize AI technologies to improve operational efficiency, gain a competitive advantage, and drive growth.  Their services likely include AI strategy development, technology selection, implementation support, and ongoing optimization.  They cater to a range of industries, assisting businesses in leveraging AI for tasks such as data analysis, automation, and predictive modeling.\",\n  \"industry\": \"Information Technology and Services; specifically, Artificial Intelligence Consulting\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.19804440025521927
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 92,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 211
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:42,044 - INFO - [app.py:158] - Successfully enriched lead: LotusAI
+2025-01-23 00:46:46,989 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"OnRanko is a technology company specializing in leveraging artificial intelligence (AI) to enhance digital marketing strategies.  They offer a suite of services including marketing automation, streamlining repetitive tasks and optimizing campaigns. Their expertise extends to content marketing, likely using AI for content creation, optimization, and distribution.  Essentially, OnRanko aims to improve marketing ROI through AI-powered automation and data-driven insights, targeting businesses seeking efficient and effective marketing solutions.\",\n  \"industry\": \"Marketing Technology (MarTech)\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.22612931810576339
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 86,
+    "candidatesTokenCount": 116,
+    "totalTokenCount": 202
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:46,990 - INFO - [app.py:158] - Successfully enriched lead: OnRanko
+2025-01-23 00:46:52,040 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"SEO Anchor Point is a digital marketing agency focused on search engine optimization (SEO). They develop and implement strategies to improve clients' online visibility on search engine results pages (SERPs).  Their services likely include keyword research, on-page optimization, link building, technical SEO, and content strategy to attract more targeted traffic to client websites, ultimately boosting brand awareness and driving sales or conversions.  They compete in a competitive market requiring strong technical expertise and a deep understanding of ever-evolving search engine algorithms.\",\n  \"industry\": \"Digital Marketing\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.21232511901855469
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 96,
+    "candidatesTokenCount": 125,
+    "totalTokenCount": 221
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:52,042 - INFO - [app.py:158] - Successfully enriched lead: SEO Anchor Point
+2025-01-23 00:46:56,908 - INFO - [app.py:122] - Gemini API Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"description\": \"Lanai is a technology company specializing in AI-powered workforce solutions.  Their platform focuses on optimizing human-AI interaction within enterprise settings. This involves identifying opportunities for AI integration, ensuring data security and ethical considerations, and facilitating the seamless collaboration between human employees and AI systems to improve productivity and efficiency.  The platform essentially aims to bridge the gap between human capabilities and AI potential, maximizing the benefits of both.\",\n  \"industry\": \"Artificial Intelligence (AI) Software and Services\"\n}\n```\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.27835472992488314
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 97,
+    "candidatesTokenCount": 112,
+    "totalTokenCount": 209
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+2025-01-23 00:46:56,909 - INFO - [app.py:158] - Successfully enriched lead: Lanai
+2025-01-23 00:46:59,051 - INFO - [app.py:239] - Successfully added 5 new leads
+2025-01-23 00:46:59,052 - INFO - [app.py:304] - Scheduler started
+2025-01-23 00:46:59,074 - WARNING - [_internal.py:97] -  * Debugger is active!
+2025-01-23 00:46:59,075 - INFO - [_internal.py:97] -  * Debugger PIN: 825-551-086
+2025-01-23 00:47:14,355 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:47:14] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:47:14,360 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:47:14] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:47:14,364 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:47:14] "GET /api/errors HTTP/1.1" 200 -
+2025-01-23 00:47:14,396 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:47:14] "GET /api/leads HTTP/1.1" 200 -
+2025-01-23 00:47:14,400 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:47:14] "GET /api/stats HTTP/1.1" 200 -
+2025-01-23 00:47:14,416 - INFO - [_internal.py:97] - 127.0.0.1 - - [23/Jan/2025 00:47:14] "GET /api/errors HTTP/1.1" 200 -
