@@ -1,6 +1,12 @@
 # 🎯 ProspectIQ
 
 Your AI-Powered B2B Lead Generation Engine! Transform your sales prospecting with intelligent data enrichment and real-time insights. 🚀
+<div align="center">
+  <a href="https://youtu.be/_0m_WN30bLk">
+    <img src="https://img.youtube.com/vi/_0m_WN30bLk/hqdefault.jpg" alt="AutoML-MLOps Demo" />
+  </a>
+</div>
+
 
 ## ✨ Features
 
